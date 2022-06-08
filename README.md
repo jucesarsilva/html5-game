@@ -5,10 +5,6 @@ A simple game with html5 (canvas)
 ## Demo
 [Here](https://jucesarsilva.github.io/html5-game/index.html)
 
-### Dependecies
-```
-npm install --global gulp-cli
-```
 
 ### Config
 > it's will install 
