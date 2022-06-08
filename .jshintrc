@@ -1,18 +1,3 @@
 {
-  "strict": "global",
-  "globals": {
-      
-    // Jasmine
-    "jasmine": false,
-    "describe": false,
-    "beforeEach": false,
-    "afterEach": false,
-    "it": false,
-    "expect": false,
-
-    // Protractor
-    "browser": false,
-    "element": false,
-    "by": false
-  }
+  "strict": "global"
 }
