@@ -6,18 +6,13 @@
   "repository": "https://github.com/jucesarsilva/html5-game",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
     "bower": "^1.7.7",
     "gulp": "^3.9.1",
-    "gulp-babel": "^8.0.0",
     "gulp-clean": "^0.3.2",
     "gulp-concat": "^2.6.1",
     "gulp-cssmin": "^0.1.7",
     "gulp-html-minifier": "^0.1.8",
     "gulp-jshint": "^2.0.4",
-    "gulp-plumber": "^1.2.1",
-    "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.11",
@@ -33,11 +28,15 @@
     "protractor": "^4.0.9"
   },
   "scripts": {
-    "prestart": "yarn build",
+    "postinstall": "bower install",
+    "prestart": "npm install",
     "start": "http-server -a localhost -p 8000 --cors -c-1 ./",
-    "build": "gulp"
-  },
-  "resolutions": {
-    "graceful-fs": "^4.2.9"
+    "pretest": "npm install",
+    "test": "karma start karma.conf.js",
+    "test-single-run": "karma start karma.conf.js --single-run",
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update",
+    "preprotractor": "npm run update-webdriver",
+    "protractor": "protractor e2e-tests/protractor.conf.js"
   }
 }
