@@ -1,6 +1,5 @@
-/**
- * @author Julio Cesar Silva
- */
+import Engine from './Engine.js'
+
 class Explosion extends Engine {
   constructor(_name, _cI, _iF, _url, _type) {
     super(_name, _cI, _iF, _url, _type)
@@ -19,10 +18,12 @@ class Explosion extends Engine {
   };
 
   play(_x, _y) {
-    this.x = _x;
-    this.y = _y;
-    this.index = 0;
-    this.permission = false
+    if ( _x && _y) {
+      this.x = _x;
+      this.y = _y;
+      this.index = 0;
+      this.permission = false
+    }
   };
 
   Animation() {
@@ -31,3 +32,5 @@ class Explosion extends Engine {
       return this.sprite[this.index];
   };
 }
+
+export default Explosion

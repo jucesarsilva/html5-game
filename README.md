@@ -7,7 +7,6 @@ A simple game with html5 (canvas)
 
 ### Dependecies
 ```
-npm install -g bower
 npm install --global gulp-cli
 ```
 

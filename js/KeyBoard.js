@@ -1,6 +1,5 @@
-/**
- * @author Julio Cesar Silva
- */
+import Engine from './Engine.js'
+
 class KeyBoard {
   constructor() {
     this.left = false;
@@ -22,8 +21,6 @@ class KeyBoard {
   }
 
   upDateKeys() {
-    // requestAnimationFrame(this.upDateKeys);
-    
     // key up
     if (38 in this.keysDown) {
       this.up = true;
@@ -82,3 +79,5 @@ class KeyBoard {
     return this.space;
   };
 }
+
+export default KeyBoard

@@ -1,6 +1,3 @@
-/**
- * @author Julio Cesar Silva
- */
 class Engine {
   constructor(_name, _cI, _iF, _url, _type) {
     this.width = 0;
@@ -17,13 +14,15 @@ class Engine {
     this.iF = _iF;
     this.cI = _cI;
 
+    const self = this;
+
     for (this.cI; this.cI < this.iF; this.cI++) {
       this.image = new Image();
       this.image.src = this.url + this.cI + "." + this.type;
-      this.image.onload = () => {
-        this.overWriteWidth(this.width);
-        this.overWriteHeight(this.height);
-        this.overWriteReady(true);
+      this.image.onload = function() {
+        self.overWriteWidth(this.width);
+        self.overWriteHeight(this.height);
+        self.overWriteReady(true);
       };
       this.sprite.push(this.image);
     }
@@ -85,3 +84,5 @@ class Engine {
     this.speed = update;
   };
 }
+
+export default Engine

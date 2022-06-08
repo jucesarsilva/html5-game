@@ -1,6 +1,5 @@
-/**
- * @author Julio Cesar Silva
- */
+import Engine from './Engine.js'
+
 class Player extends Engine {
   constructor(_name, _cI, _iF, _url, _type) {
     super(_name, _cI, _iF, _url, _type)
@@ -47,3 +46,5 @@ class Player extends Engine {
     this.respaw = true;
   }
 }
+
+export default Player
