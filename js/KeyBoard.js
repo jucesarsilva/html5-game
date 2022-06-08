@@ -2,83 +2,83 @@
  * @author Julio Cesar Silva
  */
 class KeyBoard {
-  #left = false;
-  #right = false;
-  #down = false;
-  #up = false;
-  #space = false;
-  #keysDown = {};
-
   constructor() {
+    this.left = false;
+    this.right = false;
+    this.down = false;
+    this.up = false;
+    this.space = false;
+    this.keysDown = {};
+
     window.addEventListener("keydown", (e) => {
-      this.#keysDown[e.keyCode] = true;
+      this.keysDown[e.keyCode] = true;
     }, false);
   
     window.addEventListener("keyup", (e) => {
-      delete this.#keysDown[e.keyCode];
+      delete this.keysDown[e.keyCode];
     }, false);
 
-    upDateKeys();
+    this.upDateKeys();
   }
 
   upDateKeys() {
-    requestAnimationFrame(upDateKeys);
-
+    // requestAnimationFrame(this.upDateKeys);
+    
     // key up
-    if (38 in this.#keysDown) {
-      this.#up = true;
+    if (38 in this.keysDown) {
+      this.up = true;
     }
     //key down
-    else if (40 in this.#keysDown) {
-      this.#down = true;
+    else if (40 in this.keysDown) {
+      this.down = true;
     }
     //none
     else {
-      this.#down = false;
-      this.#up = false;
+      this.down = false;
+      this.up = false;
     }
 
     //key left
-    if (37 in this.#keysDown) {
-      this.#left = true;
+    if (37 in this.keysDown) {
+      this.left = true;
     }
     //key right
-    else if (39 in this.#keysDown) {
-      this.#right = true;
+    else if (39 in this.keysDown) {
+      this.right = true;
     }
     //none
     else {
-      this.#left = false;
-      this.#right = false;
+      this.left = false;
+      this.right = false;
     }
 
     /* key for player's shot*/
-    if (32 in this.#keysDown) {
-      this.#space = true;
+    if (32 in this.keysDown) {
+      this.space = true;
     }
     else {
-      this.#space = false;
+      this.space = false;
     }
   };
 
   /* methods for update status of the public keys */
   getKeyUp() {
-    return this.#up;
+    return this.up;
   };
 
   getKeyDown() {
-    return this.#down;
+    return this.down;
   };
 
   getKeyLeft() {
-    return this.#left;
+    return this.left;
   };
 
   getKeyRight() {
-    return this.#right;
+    return this.right;
   };
 
   getKeySpace() {
-    return this.#space;
+    return this.space;
   };
 }

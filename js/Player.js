@@ -21,29 +21,29 @@ class Player extends Engine {
     /* putting physics properties*/
     this.vy = 0;
     this.vx = 0;
-    this.VelocMaxDown = speed;
-    this.VelocMaxUp = -speed;
-    this.VelocMaxRigth = speed;
-    this.VelocMaxLeft = -speed;
+    this.VelocMaxDown = this.speed;
+    this.VelocMaxUp = -this.speed;
+    this.VelocMaxRigth = this.speed;
+    this.VelocMaxLeft = -this.speed;
     this.constFrenagem = 0.96;
   }
 
   getTimerRespaw() {
-    return timerRespaw;
+    return this.timerRespaw;
   }
 
   isRespaw() {
-    if (respaw) {
-      timerRespaw++;
-      if (timerRespaw > 300) {
-        respaw = false;
-        timerRespaw = 0;
+    if (this.respaw) {
+      this.timerRespaw++;
+      if (this.timerRespaw > 300) {
+        this.respaw = false;
+        this.timerRespaw = 0;
       }
     }
-    return respaw;
+    return this.respaw;
   }
 
   play() {
-    respaw = true;
+    this.respaw = true;
   }
-};
+}

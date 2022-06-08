@@ -1,7 +1,6 @@
 /**
  * @author Julio Cesar Silva
  */
-
 class Engine {
   constructor(_name, _cI, _iF, _url, _type) {
     this.width = 0;
@@ -18,71 +17,71 @@ class Engine {
     this.iF = _iF;
     this.cI = _cI;
 
-    for (cI; cI < iF; cI++) {
+    for (this.cI; this.cI < this.iF; this.cI++) {
       this.image = new Image();
-      this.image.src = url + cI + "." + type;
+      this.image.src = this.url + this.cI + "." + this.type;
       this.image.onload = () => {
-        overWriteWidth(this.width);
-        overWriteHeight(this.height);
-        overWriteReady(true);
+        this.overWriteWidth(this.width);
+        this.overWriteHeight(this.height);
+        this.overWriteReady(true);
       };
       this.sprite.push(this.image);
     }
   }
 
   overWriteWidth(update) {
-    width = update;
+    this.width = update;
   };
 
   overWriteHeight(update) {
-    height = update;
+    this.height = update;
   };
 
   overWriteReady(update) {
-    ready = update;
+    this.ready = update;
   };
 
   getWidth() {
-    return width;
+    return this.width;
   };
 
   setWidth(update) {
-    width = update;
+    this.width = update;
   };
 
   getHeight() {
-    return height;
+    return this.height;
   };
 
   setHeight(update) {
-    height = update;
+    this.height = update;
   };
 
   getReady() {
-    return ready;
+    return this.ready;
   };
 
   getX() {
-    return x;
+    return this.x;
   };
 
   setX(update) {
-    x = update;
+    this.x = update;
   };
 
   getY() {
-    return y;
+    return this.y;
   };
 
   setY(update) {
-    y = update;
+    this.y = update;
   };
 
   getSpeed = function () {
-    return speed;
+    return this.speed;
   };
 
   setSpeed = function (update) {
-    speed = update;
+    this.speed = update;
   };
 }

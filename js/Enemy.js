@@ -17,7 +17,9 @@ class Enemy extends Engine {
 
   /* About random position on screen - config. by interval*/
   randomPosition(_initX, _endX, _initY, _endY) {
-    x = (canvasWidth + width) + (Math.random() * 500);
-    y = (height + (Math.random() * (canvasHeight - height)));
+    this.x = (this.canvasWidth + this.width) + (Math.random() * 500);
+    this.y = (this.height + (Math.random() * (this.canvasHeight - this.height)));
+
+    console.log(this.width)
   };
 }
