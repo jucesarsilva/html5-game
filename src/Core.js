@@ -285,29 +285,17 @@ class Core {
     this.ctx.drawImage((this.bg_0.sprite[1]), this.bg_0.getX() + 1, this.bg_0.getY());
     this.ctx.drawImage((this.bg_1.sprite[1]), this.bg_1.getX() + 1, this.bg_1.getY());
 
-    this.ctx.fillStyle = "rgb(100, 250, 250)";
+    this.ctx.fillStyle = "#fff";
     this.ctx.font = "24px Helvetica";
     this.ctx.textAlign = "left";
     this.ctx.textBaseline = "top";
-    this.ctx.fillText("D: " + this.deads, 10, 12);
+    this.ctx.fillText("Deads: " + this.deads, 10, 12);
 
-    this.ctx.fillStyle = "rgb(100, 250, 250)";
+    this.ctx.fillStyle = "#fff ";
     this.ctx.font = "24px Helvetica";
     this.ctx.textAlign = "left";
     this.ctx.textBaseline = "top";
-    this.ctx.fillText("K: " + this.kills, 100, 12);
-
-    this.ctx.fillStyle = "rgb(100, 250, 250)";
-    this.ctx.font = "24px Helvetica";
-    this.ctx.textAlign = "left";
-    this.ctx.textBaseline = "top";
-    this.ctx.fillText("Shots: " + this.shots, 200, 12);
-
-    this.ctx.fillStyle = "rgb(100, 250, 250)";
-    this.ctx.font = "24px Helvetica";
-    this.ctx.textAlign = "left";
-    this.ctx.textBaseline = "top";
-    this.ctx.fillText("player.x: " + parseInt(this.player.getX()) + " player.y: " + parseInt(this.player.getY()), 600, 12);
+    this.ctx.fillText("Kills: " + this.kills, 120, 12);
   }
 
   isCollision(obj_01, obj_02) {

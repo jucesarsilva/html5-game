@@ -76,11 +76,11 @@ class Engine {
     this.y = update;
   };
 
-  getSpeed = function () {
+  getSpeed() {
     return this.speed;
   };
 
-  setSpeed = function (update) {
+  setSpeed(update) {
     this.speed = update;
   };
 }
